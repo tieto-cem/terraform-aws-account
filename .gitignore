@@ -1,0 +1,9 @@
+# Terrafrom
+*.iml
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock*
+
+# JetBrains Idea
+.idea/
