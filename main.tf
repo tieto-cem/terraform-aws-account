@@ -1,11 +1,5 @@
-module "workmail" {
-  source = "./modules/workmail"
-  bucket = "${var.bucket}"
-  file = "${var.file}"
-}
-
 data "aws_lambda_invocation" "invoce_workmail" {
-  function_name = "${module.workmail.workmail_name}"
+  function_name = "${var.workmail_function_name}"
   input = <<JSON
 {
   "action": "create-group",

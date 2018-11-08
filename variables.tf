@@ -20,12 +20,8 @@ variable "receivers" {
   type = "list"
 }
 
-variable "bucket" {
-  description = "S3 bucket for the lambda binary"
-}
-
-variable "file" {
-  description = "Location to the lambda binary inside the bucket"
+variable "workmail_function_name" {
+  description = "Workmail function name for handling creation of mail addresses"
 }
 
 variable "access_to_billing" {
