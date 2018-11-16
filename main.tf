@@ -21,7 +21,7 @@ resource "aws_organizations_account" "account" {
 module "admin_role" {
   source = "./modules/admin_role"
   region = "${var.region}"
-  source_account_id = "671597299301"
+  source_account_id = "${var.identity_source_account_id}"
   account_id = "${aws_organizations_account.account.id}"
 }
 
