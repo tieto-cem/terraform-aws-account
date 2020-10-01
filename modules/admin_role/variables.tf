@@ -1,6 +1,6 @@
 variable "region" {
   description = "AWS region to use for the lambda function"
-  default = "eu-west-1"
+  default     = "eu-west-1"
 }
 
 variable "account_id" {

@@ -1,6 +1,6 @@
 variable "region" {
   description = "AWS region to use for the lambda function"
-  default = "eu-west-1"
+  default     = "eu-west-1"
 }
 
 variable "account_name" {
@@ -14,3 +14,4 @@ variable "assume_role_account_id" {
 variable "source_account_id" {
   description = "Account id for the identity account"
 }
+

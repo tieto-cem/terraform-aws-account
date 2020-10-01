@@ -1,6 +1,6 @@
 variable "region" {
   description = "AWS region to use for the lambda function"
-  default = "eu-west-1"
+  default     = "eu-west-1"
 }
 
 variable "account_name" {
@@ -17,7 +17,7 @@ variable "workmail_organization_alias" {
 
 variable "receivers" {
   description = "Workmail users part of the newly created group"
-  type = "list"
+  type        = list(string)
 }
 
 variable "workmail_function_name" {
@@ -26,7 +26,7 @@ variable "workmail_function_name" {
 
 variable "access_to_billing" {
   description = "Should IAM users have access to account billing information (ALLOW or DENY)"
-  default = "ALLOW"
+  default     = "ALLOW"
 }
 
 variable "identity_source_account_id" {
