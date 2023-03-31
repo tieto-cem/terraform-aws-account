@@ -32,3 +32,9 @@ resource "aws_iam_role_policy_attachment" "AdministratorAccess" {
   provider   = aws.new_organization_account
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
+
+resource "aws_iam_role" "contributor" {
+  name               = "Contributor"
+  provider           = aws.new_organization_account
+  assume_role_policy = data.aws_iam_policy_document.assume_role.json
+}
